@@ -1,0 +1,9 @@
+An abandoned attempt at a purely configuration file controlled forum  
+  
+This was originally meant to be my high-school project, however other opportunities drifted my attention. 
+This project is not by any means in a usable state and is I'd say around 40% done.  
+  
+The golang backend code is pretty good so feel free to repurpose it. But for the love of god DON'T use the Elm front end code.
+My abilities has greatly improved when it comes to elm during the last year and I do gag a bit when looking at that elm.  
+  
+If you do however want an example of how NOT to structure pure-functional code, go ahead.  
