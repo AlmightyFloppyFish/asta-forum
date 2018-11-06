@@ -1,0 +1,19 @@
+port: "4444"
+viewrequiresaccount: true
+regneedsapproval: false
+forums:
+  Announcements:
+    title: Announcements
+    priority: 0
+    path: db/forums/announcements/
+    subforums:
+    - Official
+    - Other
+  General:
+    title: General
+    priority: 1
+    path: db/forums/general/
+    subforums:
+    - Uppcomming Events
+    - Discussion
+    - Other

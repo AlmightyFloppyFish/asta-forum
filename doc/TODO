@@ -1,0 +1,77 @@
+[Backend]:
+# I need to... 
+  ? config file
+    actual forum section
+    Rewrite code for post creation into new invention. Instead of having a save or read method, have a saver and a reader go routine. Then send them channel of what to be written/read into.
+  * Check if username is already taken at registration
+  * Have a POST response with if login/register was valid or not // make it a string to view below field as error
+
+# And should afterwards...
+    Add registration manual approval in CLI
+    Add registration manual approval in WEBUI
+    this "UserClient" thing is confusing me really badly, there HAS to be a better solution.
+    See if cookie encryption seed can be stored on stack instead of heap
+    Remove session reciever where not needed to save performance
+    Backup management from CLI
+    Look into turning the simple permission int into a key, for better security
+  ? Recreate registration strat for reading data as well. maybe
+
+# Just remember that...
+    the Config struct is being passed as a pointer, causing it to probably be stored in the heap by the compiler. I might not want this but it's nessesarry to have it be mutable
+    Color codes might not work on Windows so i have to test that, would be a shame since the rest of the code is fully cross platform
+
+[Frontend]:
+# I need to... 
+    add startpage forum section's content (Description of content)
+  * add forum  || Completely seperate elm project
+
+# And should afterwards...
+    Look into optimizing http.get for less reuse, perhaps caching?
+
+# Just remember that...
+    I should compile final version with optimize flag, minimize it, and gzip it, i should create make file for this
+
+
+[Thoughts]:
+    I can use the already active scanner to see if "exit" is invoked
+
+    I should have most things stored as gobs instead of yaml's. But i'll stick with yaml for now because of debugging purposes
+
+    I'm gonna have the forum type from Go be packaged in a List as an elm compatible type, and use the priority / time.Time to organize them in correct order in entries[x]
+
+    I'm gonna have a user friendly "images/assets" folder, where the go server sets up properly each start
+    right to the WWW folder for elm to by design pick up
+
+    // Permission 1 is admin , 3 is user
+
+[Completed]:
+    Concurrent HTTP server
+    CLI interface functionality
+    CLI root account creation
+    encrypted login session via cookies
+    encrypted server side db with sha256 hashes
+    create encoder for registration to accounts.yaml. It should be map[string]UserServer
+    create CLI // Should definitely be higher priority than I've been placing it, it would definitely greatly increase debugging potential
+    Login and Registration pages with POST requests.
+    Mobile bar
+    Make registration work, (get decode error)
+    backup accounts file before writing to it (because it gets voided)
+    make CLI for registrations
+    view registered users from CLI
+    create config if not exist 
+    load config at start of main
+    have most methods take config as reciever
+    creating new forums/subforums in config file
+    create better OOP code, and really do some cleaning up.
+    create folder/file hierarchy for forum // Will not update if new subforums are created
+    Rewrite code for registration and login into new invention
+    Redo the help message
+    Add permission levels
+    fix so cli doesn't spit out panic errors when incorrect amount of args is supplied to command
+    I need to rename c config to s session
+    registration needs to default to permission user from frontend
+    complete desktop bar
+    fix desktop looks
+    everything's broken right now, reason being that I'm making login and register info seperate and stuff isn't working.
+
+vim: ft=dosini cms=#%s

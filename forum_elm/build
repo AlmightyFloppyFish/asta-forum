@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Compile to correct location nomatter which dir you launch script from
+
+IN_DIR=$(dirname "$0")
+# echo "$IN_DIR/test"
+
+cd $IN_DIR
+elm make src/Main.elm --output=../www/forums/index.html

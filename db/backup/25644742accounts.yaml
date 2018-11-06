@@ -1,0 +1,12 @@
+adm:
+  username: adm
+  password: !!binary A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=
+test1234:
+  username: test1234
+  password: !!binary k36NX7tIvUlJU2zWW401xCa4DS+DDFwwjizexCKuIkQ=
+testuser:
+  username: testuser
+  password: !!binary WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=
+testuser12345:
+  username: testuser12345
+  password: !!binary T1lnd6FzLtSAQ0nmpgHi24tqqa+VfNxjgN20N/G5e3Y=
